@@ -1,36 +1,80 @@
-/* =========================
+/* -------------------------
    RESET
-========================= */
+-------------------------- */
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
-/* =========================
+/* -------------------------
+   VARIABLES
+-------------------------- */
+
+:root{
+
+    --bg:#05080A;
+
+    --cyan:#26F0E0;
+
+    --cyan-light:#4DF6FF;
+
+    --text:#EAFBFF;
+
+    --muted:#8EA5B2;
+
+    --footer:#5C6973;
+
+}
+
+/* -------------------------
    BODY
-========================= */
+-------------------------- */
 
 body{
 
-    background:#05080A;
-    color:#EAFBFF;
+    background:var(--bg);
+
+    color:var(--text);
 
     font-family:'Inter',sans-serif;
 
     min-height:100vh;
 
     display:flex;
+
     flex-direction:column;
 
-    overflow-x:hidden;
+    overflow:hidden;
 
 }
 
-/* =========================
+/* -------------------------
+   BACKGROUND
+-------------------------- */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,
+    rgba(38,240,224,.05),
+    transparent 55%);
+
+    z-index:-1;
+
+}
+
+/* -------------------------
    HERO
-========================= */
+-------------------------- */
 
 .hero{
 
@@ -44,94 +88,121 @@ body{
 
     align-items:center;
 
-    text-align:center;
+    transform:translateY(-45px);
 
-    transform:translateY(-40px);
+    text-align:center;
 
     padding:32px;
 
 }
 
-/* =========================
+/* -------------------------
    LOGO
-========================= */
+-------------------------- */
 
 .logo{
 
     width:125px;
 
-    height:auto;
-
-    margin-bottom:36px;
+    margin-bottom:32px;
 
     filter:
-        drop-shadow(0 0 10px rgba(38,240,224,.22));
+
+    drop-shadow(0 0 10px rgba(38,240,224,.15));
+
+    animation:float 7s ease-in-out infinite;
 
 }
 
-/* =========================
+/* -------------------------
    TITLE
-========================= */
+-------------------------- */
 
 h1{
 
     font-family:'Space Grotesk',sans-serif;
 
-    font-size:4.5rem;
+    font-size:4.4rem;
 
     font-weight:700;
 
     letter-spacing:.18em;
 
-    color:#26F0E0;
+    color:var(--cyan);
 
     margin-bottom:18px;
 
 }
 
-/* =========================
+/* -------------------------
    TAGLINE
-========================= */
+-------------------------- */
 
 .tagline{
 
-    font-family:'Inter',sans-serif;
+    font-size:.95rem;
 
     font-weight:300;
 
-    font-size:.95rem;
-
     letter-spacing:.55em;
 
-    text-transform:uppercase;
-
-    color:#8EA5B2;
+    color:var(--muted);
 
 }
 
-/* =========================
+/* -------------------------
    FOOTER
-========================= */
+-------------------------- */
 
 footer{
 
     text-align:center;
 
-    padding:20px 0 28px;
-
-    color:#65737E;
-
-    font-size:.75rem;
-
-    letter-spacing:.12em;
+    padding:22px;
 
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+footer p{
 
-@media (max-width:768px){
+    color:var(--footer);
+
+    font-size:.75rem;
+
+    letter-spacing:.15em;
+
+}
+
+/* -------------------------
+   FLOAT
+-------------------------- */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* -------------------------
+   MOBILE
+-------------------------- */
+
+@media(max-width:768px){
 
     .hero{
 
@@ -141,9 +212,7 @@ footer{
 
     .logo{
 
-        width:95px;
-
-        margin-bottom:28px;
+        width:90px;
 
     }
 
@@ -159,7 +228,7 @@ footer{
 
         font-size:.72rem;
 
-        letter-spacing:.35em;
+        letter-spacing:.32em;
 
     }
 
