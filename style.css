@@ -1,29 +1,24 @@
-/* -------------------------
-   RESET
--------------------------- */
-
-*{
-
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-
-}/* ==========================================
+/* ==================================================
    INTEL BUTTERFLY
-   Version 1.0
-========================================== */
+   Version 1.1
+================================================== */
 
-/* ---------- GOOGLE FONTS ----------
+
+/* -------------------------
+   Google Fonts
+----------------------------
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
------------------------------------*/
+
+*/
 
 
-/* ==========================================
+/* ==================================================
    RESET
-========================================== */
+================================================== */
 
 *{
     margin:0;
@@ -32,40 +27,30 @@
 }
 
 
-/* ==========================================
-   VARIABLES
-========================================== */
+/* ==================================================
+   ROOT VARIABLES
+================================================== */
 
 :root{
 
-    --bg:#05080A;
+    --background:#05080A;
 
     --primary:#26F0E0;
 
-    --text:#F4FCFF;
+    --text:#EDF8FB;
 
     --secondary:#8EA5B2;
 
-    --footer:#5D6972;
+    --footer:#67747E;
 
 }
 
 
-/* ==========================================
+/* ==================================================
    BODY
-========================================== */
+================================================== */
 
 body{
-
-    background:
-    radial-gradient(circle at top,
-    rgba(38,240,224,.06),
-    transparent 55%),
-    var(--bg);
-
-    color:var(--text);
-
-    font-family:'Inter',sans-serif;
 
     min-height:100vh;
 
@@ -75,12 +60,24 @@ body{
 
     overflow:hidden;
 
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(38,240,224,.04),
+        transparent 55%
+    ),
+    var(--background);
+
+    color:var(--text);
+
+    font-family:"Inter",sans-serif;
+
 }
 
 
-/* ==========================================
+/* ==================================================
    HERO
-========================================== */
+================================================== */
 
 .hero{
 
@@ -96,40 +93,37 @@ body{
 
     text-align:center;
 
-    transform:translateY(-35px);
-
     padding:2rem;
+
+    transform:translateY(-30px);
 
 }
 
 
-/* ==========================================
+/* ==================================================
    LOGO
-========================================== */
+================================================== */
 
 .logo{
 
-    width:125px;
+    width:110px;
 
     height:auto;
 
-    margin-bottom:2rem;
+    margin-bottom:2.25rem;
 
-    filter:
-    drop-shadow(0 0 8px rgba(38,240,224,.18));
-
-    animation:float 7s ease-in-out infinite;
+    display:block;
 
 }
 
 
-/* ==========================================
+/* ==================================================
    TITLE
-========================================== */
+================================================== */
 
 h1{
 
-    font-family:'Lato',sans-serif;
+    font-family:"Lato",sans-serif;
 
     font-size:4.6rem;
 
@@ -137,91 +131,66 @@ h1{
 
     text-transform:uppercase;
 
-    letter-spacing:.05em;
+    letter-spacing:.04em;
 
     color:var(--primary);
 
-    margin-bottom:.9rem;
+    line-height:1.05;
+
+    margin-bottom:1rem;
 
 }
 
 
-/* ==========================================
+/* ==================================================
    TAGLINE
-========================================== */
+================================================== */
 
 .tagline{
 
-    font-family:'Inter',sans-serif;
+    font-family:"Inter",sans-serif;
 
-    font-size:.95rem;
+    font-size:.92rem;
 
     font-weight:300;
 
-    letter-spacing:.45em;
-
     text-transform:uppercase;
+
+    letter-spacing:.42em;
 
     color:var(--secondary);
 
 }
 
 
-/* ==========================================
+/* ==================================================
    FOOTER
-========================================== */
+================================================== */
 
 footer{
 
-    padding:1.6rem;
-
     text-align:center;
+
+    padding:1.75rem;
 
 }
 
 footer p{
 
-    color:var(--footer);
-
     font-size:.72rem;
 
     font-weight:300;
 
-    letter-spacing:.15em;
+    letter-spacing:.12em;
+
+    color:var(--footer);
 
 }
 
 
-/* ==========================================
-   ANIMATION
-========================================== */
-
-@keyframes float{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-5px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-/* ==========================================
+/* ==================================================
    RESPONSIVE
-========================================== */
+================================================== */
 
 @media (max-width:768px){
 
@@ -235,15 +204,17 @@ footer p{
 
     .logo{
 
-        width:90px;
+        width:85px;
+
+        margin-bottom:1.8rem;
 
     }
 
     h1{
 
-        font-size:2.4rem;
+        font-size:2.5rem;
 
-        letter-spacing:.04em;
+        letter-spacing:.03em;
 
     }
 
@@ -251,237 +222,13 @@ footer p{
 
         font-size:.72rem;
 
-        letter-spacing:.28em;
+        letter-spacing:.25em;
 
     }
 
     footer p{
 
         font-size:.65rem;
-
-    }
-
-}
-
-/* -------------------------
-   VARIABLES
--------------------------- */
-
-:root{
-
-    --bg:#05080A;
-
-    --cyan:#26F0E0;
-
-    --cyan-light:#4DF6FF;
-
-    --text:#EAFBFF;
-
-    --muted:#8EA5B2;
-
-    --footer:#5C6973;
-
-}
-
-/* -------------------------
-   BODY
--------------------------- */
-
-body{
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    font-family:'Inter',sans-serif;
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    overflow:hidden;
-
-}
-
-/* -------------------------
-   BACKGROUND
--------------------------- */
-
-.background{
-
-    position:fixed;
-
-    inset:0;
-
-    background:
-
-    radial-gradient(circle at top,
-    rgba(38,240,224,.05),
-    transparent 55%);
-
-    z-index:-1;
-
-}
-
-/* -------------------------
-   HERO
--------------------------- */
-
-.hero{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    transform:translateY(-45px);
-
-    text-align:center;
-
-    padding:32px;
-
-}
-
-/* -------------------------
-   LOGO
--------------------------- */
-
-.logo{
-
-    width:125px;
-
-    margin-bottom:32px;
-
-    filter:
-
-    drop-shadow(0 0 10px rgba(38,240,224,.15));
-
-    animation:float 7s ease-in-out infinite;
-
-}
-
-/* -------------------------
-   TITLE
--------------------------- */
-
-h1{
-
-    font-family:'Space Grotesk',sans-serif;
-
-    font-size:4.4rem;
-
-    font-weight:700;
-
-    letter-spacing:.18em;
-
-    color:var(--cyan);
-
-    margin-bottom:18px;
-
-}
-
-/* -------------------------
-   TAGLINE
--------------------------- */
-
-.tagline{
-
-    font-size:.95rem;
-
-    font-weight:300;
-
-    letter-spacing:.55em;
-
-    color:var(--muted);
-
-}
-
-/* -------------------------
-   FOOTER
--------------------------- */
-
-footer{
-
-    text-align:center;
-
-    padding:22px;
-
-}
-
-footer p{
-
-    color:var(--footer);
-
-    font-size:.75rem;
-
-    letter-spacing:.15em;
-
-}
-
-/* -------------------------
-   FLOAT
--------------------------- */
-
-@keyframes float{
-
-    0%{
-
-        transform:translateY(0px);
-
-    }
-
-    50%{
-
-        transform:translateY(-5px);
-
-    }
-
-    100%{
-
-        transform:translateY(0px);
-
-    }
-
-}
-
-/* -------------------------
-   MOBILE
--------------------------- */
-
-@media(max-width:768px){
-
-    .hero{
-
-        transform:translateY(-20px);
-
-    }
-
-    .logo{
-
-        width:90px;
-
-    }
-
-    h1{
-
-        font-size:2.3rem;
-
-        letter-spacing:.12em;
-
-    }
-
-    .tagline{
-
-        font-size:.72rem;
-
-        letter-spacing:.32em;
 
     }
 
