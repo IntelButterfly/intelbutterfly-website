@@ -1,12 +1,10 @@
-/* ===================================================
+/* ==========================================
    INTEL BUTTERFLY
    Version 1.0
-=================================================== */
+========================================== */
 
 
-/* ==========================
-   RESET
-========================== */
+/* ---------- RESET ---------- */
 
 *{
     margin:0;
@@ -15,36 +13,30 @@
 }
 
 
-/* ==========================
-   COLOR SYSTEM
-========================== */
+/* ---------- COLORS ---------- */
 
 :root{
 
     --background:#000000;
 
-    --primary:#43E7DA;
+    --primary:#3FE6D8;
 
     --text:#F5F7F8;
 
-    --secondary:#8A919A;
+    --secondary:#8B939C;
 
-    --footer:#555B63;
+    --footer:#5E656C;
 
 }
 
 
-/* ==========================
-   BODY
-========================== */
+/* ---------- BODY ---------- */
 
 body{
 
     background:var(--background);
 
     color:var(--text);
-
-    font-family:"Inter",sans-serif;
 
     min-height:100vh;
 
@@ -54,12 +46,12 @@ body{
 
     overflow-x:hidden;
 
+    font-family:"Inter",sans-serif;
+
 }
 
 
-/* ==========================
-   HERO
-========================== */
+/* ---------- HERO ---------- */
 
 .hero{
 
@@ -77,14 +69,12 @@ body{
 
     padding:2rem;
 
-    transform:translateY(-55px);
+    transform:translateY(-45px);
 
 }
 
 
-/* ==========================
-   LOGO
-========================== */
+/* ---------- LOGO ---------- */
 
 .logo{
 
@@ -92,97 +82,85 @@ body{
 
     height:auto;
 
-    margin-bottom:2.4rem;
-
-    display:block;
+    margin-bottom:42px;
 
 }
 
 
-/* ==========================
-   TITLE
-========================== */
+/* ---------- TITLE ---------- */
 
 h1{
 
-    font-family:"Avenir Next","Lato",sans-serif;
+    font-family:"Lato",sans-serif;
 
-    font-size:4.2rem;
+    font-size:4rem;
 
     font-weight:700;
 
+    color:var(--primary);
+
     text-transform:uppercase;
 
-    letter-spacing:0.05em;
+    letter-spacing:0.06em;
 
     line-height:1;
 
-    color:var(--primary);
-
-    margin-bottom:1rem;
+    margin-bottom:18px;
 
 }
 
 
-/* ==========================
-   TAGLINE
-========================== */
+/* ---------- TAGLINE ---------- */
 
 .tagline{
 
     font-family:"Inter",sans-serif;
 
-    font-size:0.92rem;
+    font-size:0.88rem;
 
     font-weight:300;
 
     text-transform:uppercase;
 
-    letter-spacing:0.40em;
+    letter-spacing:0.38em;
 
     color:var(--secondary);
 
 }
 
 
-/* ==========================
-   FOOTER
-========================== */
+/* ---------- FOOTER ---------- */
 
 footer{
 
     text-align:center;
 
-    padding:28px 0;
+    padding:28px;
 
 }
 
 footer p{
 
-    font-family:"Inter",sans-serif;
-
     font-size:0.72rem;
 
     font-weight:300;
 
-    letter-spacing:0.14em;
+    letter-spacing:0.12em;
 
     color:var(--footer);
 
 }
 
 
-/* ==========================
-   RESPONSIVE
-========================== */
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width:768px){
 
     .hero{
 
-        transform:translateY(-20px);
+        transform:translateY(-15px);
 
-        padding:1.5rem;
+        padding:24px;
 
     }
 
@@ -190,21 +168,21 @@ footer p{
 
         width:82px;
 
-        margin-bottom:1.8rem;
+        margin-bottom:30px;
 
     }
 
     h1{
 
-        font-size:2.3rem;
+        font-size:2.25rem;
 
-        letter-spacing:0.04em;
+        letter-spacing:0.05em;
 
     }
 
     .tagline{
 
-        font-size:0.72rem;
+        font-size:0.70rem;
 
         letter-spacing:0.24em;
 
